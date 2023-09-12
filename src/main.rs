@@ -6,7 +6,7 @@ fn main() -> Result<()> {
     let args: Vec<_> = std::env::args().collect();
     let command = &args[3];
     let command_args = &args[4..];
-    let output = std::process::Command::new(command)
+    let _output = std::process::Command::new(command)
         .args(command_args)
         .output()
         .with_context(|| {
