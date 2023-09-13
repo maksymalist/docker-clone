@@ -21,11 +21,5 @@ fn main() -> Result<()> {
     } else {
         std::process::exit(1);
     }
-    if output.status.success() {
-        let std_out = std::str::from_utf8(&output.stdout)?;
-        println!("{}", std_out);
-    } else {
-        std::process::exit(1);
-    }
     Ok(())
 }
