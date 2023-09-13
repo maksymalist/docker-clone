@@ -18,7 +18,7 @@ fn main() -> Result<()> {
 
     if output.status.success() {
         let std_out = std::str::from_utf8(&output.stdout)?;
-        println!("{}", std_out);
+        println!("{}", std_out.replace("\n", ""));
     } else {
         std::process::exit(1);
     }
